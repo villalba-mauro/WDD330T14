@@ -1,0 +1,19 @@
+
+
+/* Estilos para el pie del carrito */
+.cart-footer {
+    padding: 1rem;
+    border-top: 2px solid #ddd;
+    text-align: right;
+  }
+  
+  .cart-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0.5rem 0;
+  }
+  
+  /* Clase para ocultar elementos */
+  .hide {
+    display: none !important;
+  }

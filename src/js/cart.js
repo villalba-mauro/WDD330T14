@@ -26,3 +26,29 @@ function cartItemTemplate(item) {
 }
 
 renderCartContents();
+
+//Made in week 2
+// Función para actualizar el total
+function updateCartTotal() {
+  const cartItems = document.querySelectorAll('.cart-card');
+  const totalElement = document.getElementById('totalAmount');
+  const cartFooter = document.querySelector('.cart-footer');
+  
+  let total = 0;
+  
+  cartItems.forEach(item => {
+    const priceText = item.querySelector('.cart-card__price').textContent;
+    const quantity = parseInt(item.querySelector('.cart-card__quantity').textContent.split(': ')[1]);
+    const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+    total += price * quantity;
+  });
+
+  totalElement.textContent = total.toFixed(2);
+  
+  // Mostrar/ocultar según contenido
+  cartFooter.classList.toggle('hide', cartItems.length === 0);
+}
+
+// Ejecutar al cargar y cada vez que se modifique el carrito
+document.addEventListener('DOMContentLoaded', updateCartTotal);
+// También deberías llamar a updateCartTotal después de cualquier modificación del carrito
