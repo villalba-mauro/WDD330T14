@@ -1,0 +1,5 @@
+Task: Add HTML element to cart page to hold the total. Add a class and CSS to hide the element by default. We can use this same element later to also hold the Checkout button when we add that functionality. So something like to following might be appropriate: <div class="cart-footer hide"><p class="cart-total">Total: </p></div>
+
+Source: https://github.com/villalba-mauro/WDD330T14/tree/main/src/cart
+l
+Site: https://villalba-mauro.github.io/WDD330T14/src/cart/index.html
